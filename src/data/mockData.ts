@@ -53,12 +53,34 @@ export const vulnerablePopulation = [
 ];
 
 export const alerts = [
-  { id: 1, type: "extreme" as const, title: "Extreme Heat Warning", location: "Central Delhi", message: "Temperature expected to exceed 47°C. Stay indoors.", time: "2 min ago" },
-  { id: 2, type: "high" as const, title: "Dehydration Advisory", location: "Jaipur Old City", message: "High dehydration risk. Increase water intake.", time: "15 min ago" },
-  { id: 3, type: "high" as const, title: "Hospital Alert", location: "Ahmedabad West", message: "Civil Hospital approaching 90% heatstroke capacity.", time: "32 min ago" },
-  { id: 4, type: "moderate" as const, title: "Power Outage Warning", location: "South Mumbai", message: "Grid stress detected. Possible brownouts.", time: "1 hr ago" },
-  { id: 5, type: "extreme" as const, title: "Cooling Center Open", location: "Central Delhi", message: "Emergency cooling center at Community Hall, Connaught Place.", time: "1.5 hr ago" },
+  { id: 1, type: "extreme" as const, title: "Extreme Heat Warning", location: "Central Delhi", message: "Temperature expected to exceed 47°C. Stay indoors.", time: "2 min ago", timestamp: "2026-02-14T14:58:00" },
+  { id: 2, type: "high" as const, title: "Dehydration Advisory", location: "Jaipur Old City", message: "High dehydration risk. Increase water intake.", time: "15 min ago", timestamp: "2026-02-14T14:45:00" },
+  { id: 3, type: "high" as const, title: "Hospital Alert", location: "Ahmedabad West", message: "Civil Hospital approaching 90% heatstroke capacity.", time: "32 min ago", timestamp: "2026-02-14T14:28:00" },
+  { id: 4, type: "moderate" as const, title: "Power Outage Warning", location: "South Mumbai", message: "Grid stress detected. Possible brownouts.", time: "1 hr ago", timestamp: "2026-02-14T14:00:00" },
+  { id: 5, type: "extreme" as const, title: "Cooling Center Open", location: "Central Delhi", message: "Emergency cooling center at Community Hall, Connaught Place.", time: "1.5 hr ago", timestamp: "2026-02-14T13:30:00" },
+  { id: 6, type: "moderate" as const, title: "UV Index Warning", location: "Chennai Marina", message: "UV index exceeds safe levels. Avoid direct sun exposure.", time: "2 hr ago", timestamp: "2026-02-14T13:00:00" },
+  { id: 7, type: "high" as const, title: "Water Supply Alert", location: "Kolkata North", message: "Water supply disruption expected due to high demand.", time: "3 hr ago", timestamp: "2026-02-14T12:00:00" },
+  { id: 8, type: "extreme" as const, title: "Heatstroke Advisory", location: "Jaipur Old City", message: "Multiple heatstroke cases reported. Emergency services deployed.", time: "4 hr ago", timestamp: "2026-02-14T11:00:00" },
 ];
+
+export const hospitals = [
+  { id: "h1", name: "AIIMS Delhi", zone: "Central Delhi", totalBeds: 200, occupied: 185, heatstrokeCases: 34, status: "critical" as const },
+  { id: "h2", name: "KEM Hospital", zone: "South Mumbai", totalBeds: 150, occupied: 112, heatstrokeCases: 18, status: "warning" as const },
+  { id: "h3", name: "Victoria Hospital", zone: "Bangalore East", totalBeds: 180, occupied: 95, heatstrokeCases: 6, status: "normal" as const },
+  { id: "h4", name: "SMS Hospital", zone: "Jaipur Old City", totalBeds: 160, occupied: 148, heatstrokeCases: 29, status: "critical" as const },
+  { id: "h5", name: "Civil Hospital", zone: "Ahmedabad West", totalBeds: 140, occupied: 126, heatstrokeCases: 24, status: "warning" as const },
+  { id: "h6", name: "Rajiv Gandhi GH", zone: "Chennai Marina", totalBeds: 170, occupied: 110, heatstrokeCases: 12, status: "normal" as const },
+];
+
+export const liveWeather = {
+  temperature: 45,
+  feelsLike: 49,
+  humidity: 28,
+  windSpeed: 12,
+  uvIndex: 11,
+  heatIndex: 52,
+  lastUpdated: "2 min ago",
+};
 
 export function getRiskColor(level: string) {
   switch (level) {
